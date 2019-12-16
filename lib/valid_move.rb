@@ -1,8 +1,10 @@
 # code your #valid_move? method here
-def valid_move? (board, index)
-  if board[index] == ""
-    true
-  elsif board[index] == " "
+def valid_move?(board, index)
+  if index == nil || index < 0 || index > 8
+    false
+  elsif position_taken?(board, index)
+    false
+  else
     true
   end
 end
